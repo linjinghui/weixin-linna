@@ -1,23 +1,42 @@
-   <view class="section">
-    <view class="main">
-      <image class="log" src="../../images/timg.jpg"></image>
-      <text class="title">华莱士 ></text>
-      <text class="subTitle">评价4.7 月售496单 蜂鸟专送约20分钟</text>
-      <text class="notice">公告： 您好，如您与任何需求可备注清楚，我们会尽量满足您的要求</text>
-
-      <view>asdasdsdas-start12</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view>
-      <view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas1</view><view>asdasdsdas-END</view>
+<!-- 主体结构 -->
+<view class="section">
+  <view class="main">
+    <image class="log" src="../../images/timg.jpg"></image>
+    <text class="title">华莱士 ></text>
+    <text class="subTitle">评价4.7 月售496单 蜂鸟专送约20分钟</text>
+    <text class="notice">公告： 您好，如您与任何需求可备注清楚，我们会尽量满足您的要求</text>
+    <view class="wrap-goods">
+      <ul class="p-l">
+        <li>热销</li><li>优惠</li><li>店主推荐</li>
+      </ul>
+      <view class="p-r">
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333</view>
+        <view>1111111</view><view>222222</view><view>333333-end</view>
+      </view>
     </view>
-   </view>
-   <view class="carlist {{showCarlist && 'show'}}">
-    {{showCarlist}}
-    <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
-    <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
-    <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
-    <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
   </view>
-   <view class="footer">
-    <view class="car" bindtap="toggleCarlist"></view>
-    <button disabled="true">35起送</button>
-    <view class="money"></view>
-   </view>
+</view>
+<!-- 购物车列表 -->
+<view class="carlist {{showCarlist && 'show'}}">
+  {{showCarlist}}
+  <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
+  <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
+  <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
+  <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
+</view>
+<!-- 底部结构 -->
+<view class="footer">
+  <view class="car" bindtap="toggleCarlist"></view>
+  <button disabled="true">35起送</button>
+  <view class="money"></view>
+</view>
