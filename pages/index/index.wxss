@@ -94,6 +94,57 @@ page {
   text-indent: 20rpx;
 }
 
+.section > .main > .wrap-goods > .p-r > .wrap-good {
+  position: relative;
+  padding: 20rpx;
+  color: #666;
+  overflow: hidden;
+}
+
+.section > .main > .wrap-goods > .p-r > .wrap-good > .pic {
+  float: left;
+  margin-right: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+} 
+
+.section > .main > .wrap-goods > .p-r > .wrap-good > text {
+  display:block;
+  line-height: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.section > .main > .wrap-goods > .p-r > .wrap-good > .name,
+.section > .main > .wrap-goods > .p-r > .wrap-good > .price {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.section > .main > .wrap-goods > .p-r > .wrap-good > .price {
+  display: inline-block;
+  padding-right: 2rpx;
+  vertical-align: -32rpx;
+  color: #ff5339;
+}
+
+.section > .main > .wrap-goods > .p-r > .wrap-good > .icon-add {
+  position: absolute;
+  right: 20rpx;
+  bottom: 18rpx;
+  width: 45rpx;
+  height: 45rpx;
+  line-height: 42rpx;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  border-radius: 50%;
+  background-color: #2395ff;
+}
+
 /* ===================carlist=================== */
 
 .carlist {

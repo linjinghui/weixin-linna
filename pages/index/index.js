@@ -5,6 +5,19 @@ const app = getApp()
 Page({
   data: {
     showCarlist: false,
+    goods: [
+      { name: '招牌炙烤鸡胸餐', desc: '高温熏制的鸡胸满满都是烟熏的香味，瞬时高温把肉汁都', price: '', saleNum: '', favorite: '' }, 
+      { name: '烟熏烘烤鸡胸餐', desc: '凑满减单点不送哦，每单限一份哦~~', price: '', saleNum: '', favorite: '' },
+      { name: '招牌鸡胸沙拉', desc: '土豆、培根、生菜、面包、西红柿、豌豆、玉米、西兰', price: '', saleNum: '', favorite: '' },
+      { name: '土豆培根餐', desc: '紫薯中含还有丰富的蛋白质、硒和铁是人体抗疲劳、抗', price: '', saleNum: '', favorite: '' },
+      { name: '黑椒菲力', desc: '食用菌的蛋白质及微量元素，如锌、钛、硒等含量', price: '', saleNum: '', favorite: '' },
+      { name: '北海道金枪鱼沙拉', desc: '', price: '', saleNum: '', favorite: '' },
+      { name: '十色鸡肉沙拉', desc: '', price: '', saleNum: '', favorite: '' },
+      { name: '北海道金枪鱼沙拉', desc: '', price: '', saleNum: '', favorite: '' },
+      { name: '烤南瓜', desc: '', price: '', saleNum: '', favorite: '' },
+      { name: '多味菌菇类', desc: '', price: '', saleNum: '', favorite: '' },
+      { name: '新西兰鸡腿餐', desc: '', price: '', saleNum: '', favorite: '' }
+    ],
 
     motto: 'Hello World',
     userInfo: {},

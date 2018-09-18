@@ -7,21 +7,59 @@
     <text class="notice">公告： 您好，如您与任何需求可备注清楚，我们会尽量满足您的要求</text>
     <view class="wrap-goods">
       <ul class="p-l">
-        <li>热销</li><li>优惠</li><li>店主推荐</li>
+        <li>热销</li>
+        <li>优惠</li>
+        <li>店主推荐</li>
       </ul>
       <view class="p-r">
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333</view>
-        <view>1111111</view><view>222222</view><view>333333-end</view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
+        <view class="wrap-good">
+          <image class="pic" src="../../images/timg.jpg"></image>
+          <text class="name">招牌-酱香肉骨饭2</text>
+          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
+          <text class="sales">月售100份 好评率99%</text>
+          <text class="price">￥50.99</text>
+          <a class="icon-add">+</a>
+        </view>
       </view>
     </view>
   </view>
