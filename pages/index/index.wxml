@@ -1,5 +1,5 @@
 <!-- 主体结构 -->
-<view class="section">
+<scroll-view class="section" scroll-y scroll-top="{{sectionScrollTop}}" scroll-with-animation="true">
   <view class="main">
     <image class="log" src="../../images/timg.jpg"></image>
     <text class="title">华莱士 ></text>
@@ -7,74 +7,49 @@
     <text class="notice">公告： 您好，如您与任何需求可备注清楚，我们会尽量满足您的要求</text>
     <view class="wrap-goods">
       <ul class="p-l">
-        <li>热销</li>
-        <li>优惠</li>
-        <li>店主推荐</li>
+        <li class="{{leftNavData.index===index&&'active'}}" data-index="{{index}}" data-good-index="{{item.index}}" wx:for="{{leftNavData.data}}" wx:key="index" bindtap="clkNavItem">{{item.type}}</li>
       </ul>
-      <view class="p-r">
-        <view class="wrap-good">
+      <scroll-view class="p-r" scroll-y scroll-into-view="{{prscroll.id}}" scroll-with-animation="true">
+        <view class="wrap-good" id="{{item.id}}" wx:for="{{goods}}" wx:key="index">
           <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
+          <text class="name">{{item.name}}</text>
+          <text class="desc">{{item.desc}}</text>
+          <text class="sales">月售{{item.saleNum || 0}}份 好评率{{item.favorite || 0}}</text>
+          <text class="price">￥{{item.price}}</text>
+          <span>
+            <a class="icon-sub" wx:if="{{item.num>0}}" data-index="{{index}}" data-type="sub" bindtap="clkGoodsItem">-</a>
+            <i class="count" wx:if="{{item.num>0}}">{{item.num}}</i>
+            <a class="icon-add" data-index="{{index}}" data-type="add" bindtap="clkGoodsItem">+</a>
+          </span>
         </view>
-        <view class="wrap-good">
-          <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
-        </view>
-        <view class="wrap-good">
-          <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
-        </view>
-        <view class="wrap-good">
-          <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
-        </view>
-        <view class="wrap-good">
-          <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
-        </view>
-        <view class="wrap-good">
-          <image class="pic" src="../../images/timg.jpg"></image>
-          <text class="name">招牌-酱香肉骨饭2</text>
-          <text class="desc">500g骨头肉肉，两种配菜垫底，蜜汁香味按时打卡拉沙德</text>
-          <text class="sales">月售100份 好评率99%</text>
-          <text class="price">￥50.99</text>
-          <a class="icon-add">+</a>
-        </view>
-      </view>
+      </scroll-view>
     </view>
   </view>
-</view>
+</scroll-view>
+
 <!-- 购物车列表 -->
-<view class="carlist {{showCarlist && 'show'}}">
-  {{showCarlist}}
-  <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
-  <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
-  <view>dasdasd1</view><view>dasdasd2</view><view>dasdasd1</view><view>dasdasd2</view>
-  <view>dasdasda</view><view>dasdasdb</view><view>dasdasda</view><view>dasdasdb</view>
-</view>
+<scroll-view class="carlist {{shopCar.show && 'show'}}" scroll-with-animation="true">
+  <view class="tip">已减42元</view>
+  <view>
+    <span>已选商品</span>
+    <div>清空</div>
+  </view>
+  <view class="good" wx:for="{{shopCar.list}}" wx:key="index">
+    <span>{{item.name}}</span>
+    <div>
+      <i class="price">￥{{item.price * item.num}}</i>
+      <a class="icon-sub" data-index="{{index}}" data-type="sub" bindtap="clkCarGoodItem">-</a>
+      <i class="count">{{item.num}}</i>
+      <a class="icon-add" data-index="{{index}}" data-type="add" bindtap="clkCarGoodItem">+</a>
+    </div>
+  </view>
+</scroll-view>
+
 <!-- 底部结构 -->
 <view class="footer">
-  <view class="car" bindtap="toggleCarlist"></view>
-  <button disabled="true">35起送</button>
-  <view class="money"></view>
+  <view class="car {{totalGoodNum > 0 && 'active'}}" data-num="{{totalGoodNum}}" bindtap="toggleCarlist">
+    <i class="icon iconfont icon-gouwuche"></i>
+  </view>
+  <button disabled="{{totalPrice > 0 ? false : true}}">{{totalPrice ? '去结算' : '￥50起送'}}</button>
+  <view class="money">{{totalPrice ? '合计 ￥' + totalPrice : '请先选择商品'}}</view>
 </view>
